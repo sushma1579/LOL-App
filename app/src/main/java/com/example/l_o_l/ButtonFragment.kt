@@ -6,47 +6,54 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.findNavController
 
 class ButtonFragment : Fragment() {
-    private lateinit var button1: Button
-    private lateinit var button2: Button
-    private lateinit var button3: Button
-    private lateinit var button4: Button
-    private lateinit var button5: Button
-    private lateinit var button6: Button
+    private lateinit var school_button: Button
+    private lateinit var dog_button: Button
+    private lateinit var vegetable_button: Button
+    private lateinit var dessert_button: Button
+    private lateinit var hippo_button: Button
+    private lateinit var random_button: Button
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_button, container, false)
 
-        button1 = view.findViewById(R.id.school_button)
-        button2 = view.findViewById(R.id.dogs_button)
-        button3 = view.findViewById(R.id.vegetable_button)
-        button4 = view.findViewById(R.id.dessert_button)
-        button5 = view.findViewById(R.id.hippo_button)
-        button6 = view.findViewById(R.id.random_button)
+        school_button = view.findViewById(R.id.school_button)
+        dog_button = view.findViewById(R.id.dogs_button)
+        vegetable_button = view.findViewById(R.id.vegetable_button)
+        dessert_button = view.findViewById(R.id.dessert_button)
+        hippo_button = view.findViewById(R.id.hippo_button)
+        random_button = view.findViewById(R.id.random_button)
 
-        button1.setOnClickListener {
+        school_button.setOnClickListener {
+            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
             view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
         }
 
-        button2.setOnClickListener {
+        dog_button.setOnClickListener {
+            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
             view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
         }
 
-        button3.setOnClickListener {
+        vegetable_button.setOnClickListener {
+            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
             view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
         }
 
-        button4.setOnClickListener {
+        dessert_button.setOnClickListener {
+            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
             view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
         }
 
-        button5.setOnClickListener {
+        hippo_button.setOnClickListener {
+            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
             view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
         }
 
-        button6.setOnClickListener {
+        random_button.setOnClickListener {
+            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
             view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
         }
 
