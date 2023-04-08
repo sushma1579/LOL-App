@@ -1,15 +1,16 @@
 package com.example.l_o_l
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 
 class ButtonFragment : Fragment() {
+
+    private lateinit var model: JokeModel
     private lateinit var school_button: Button
     private lateinit var dog_button: Button
     private lateinit var vegetable_button: Button
@@ -17,7 +18,10 @@ class ButtonFragment : Fragment() {
     private lateinit var hippo_button: Button
     private lateinit var random_button: Button
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val view = inflater.inflate(R.layout.fragment_button, container, false)
 
         school_button = view.findViewById(R.id.school_button)
@@ -28,35 +32,63 @@ class ButtonFragment : Fragment() {
         random_button = view.findViewById(R.id.random_button)
 
         school_button.setOnClickListener {
-            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
-            view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
+            model.generateJoke("Tell me a joke on Schools", requireContext()) { joke ->
+                if (joke != null) {
+                    displayJoke(joke)
+                }
+            }
         }
 
         dog_button.setOnClickListener {
-            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
-            view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
+            model.generateJoke("Tell me a joke on Dogs", requireContext()) { joke ->
+                if (joke != null) {
+                    displayJoke(joke)
+                }
+            }
         }
 
         vegetable_button.setOnClickListener {
-            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
-            view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
+            model.generateJoke("Tell me a joke on Vegetables", requireContext()) { joke ->
+                if (joke != null) {
+                    displayJoke(joke)
+                }
+            }
         }
 
         dessert_button.setOnClickListener {
-            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
-            view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
+            model.generateJoke("Tell me a joke on Desserts", requireContext()) { joke ->
+                if (joke != null) {
+                    displayJoke(joke)
+                }
+            }
         }
 
         hippo_button.setOnClickListener {
-            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
-            view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
+            model.generateJoke("Tell me a joke on Hippos", requireContext()) { joke ->
+                if (joke != null) {
+                    displayJoke(joke)
+                }
+            }
         }
 
         random_button.setOnClickListener {
-            Toast.makeText(requireContext(), "button clicked", Toast.LENGTH_SHORT).show()
-            view.findNavController().navigate(R.id.action_buttonFragment_to_jokeFragment)
+            model.generateJoke("Tell me a RANDOM joke", requireContext()) { joke ->
+                if (joke != null) {
+                    displayJoke(joke)
+                }
+            }
         }
 
         return view
     }
+
+    private fun displayJoke(joke: String) {
+        val bundle = Bundle()
+        bundle.putString("joke_text", joke)
+        val jokeFragment = JokeFragment()
+        jokeFragment.arguments = bundle
+        view?.findNavController()?.navigate(R.id.action_buttonFragment_to_jokeFragment)
+    }
+
 }
+

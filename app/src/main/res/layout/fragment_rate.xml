@@ -8,96 +8,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="176dp"
-        android:contentDescription="@string/very_bad_joke"
-        android:src="@drawable/ic_rate_1"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <TextView
-        android:id="@+id/rate_textview"
+        android:id="@+id/rate_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:orientation="horizontal"
-        android:text="@string/rate_textview"
-        android:textColor="@color/purple_700"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="bad joke"
-        android:src="@drawable/ic_rate_2"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="176dp"
         android:layout_marginEnd="16dp"
-        android:contentDescription="good joke"
-        android:src="@drawable/ic_rate_3"
+        android:text="@string/how_was_the_joke"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="232dp"
-        android:contentDescription="very good joke"
-        android:src="@drawable/ic_rate_4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tap_to_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/tap_to_rate"
+        android:textColor="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck"
+        tools:layout_editor_absoluteY="75dp" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="232dp"
-        android:contentDescription="excellent joke"
-        android:src="@drawable/ic_rate_5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="ImageContrastCheck" />
+        android:id="@+id/rate_1"
+        android:layout_width="94dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/ic_rate_1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <ImageView
+        android:id="@+id/rate_2"
+        android:layout_width="68dp"
+        android:layout_height="112dp"
+        app:srcCompat="@drawable/ic_rate_2"
+        tools:ignore="ImageContrastCheck,MissingConstraints"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <ImageView
+        android:id="@+id/rate_3"
+        android:layout_width="77dp"
+        android:layout_height="107dp"
+        app:srcCompat="@drawable/ic_rate_3"
+        tools:ignore="ImageContrastCheck,MissingConstraints"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="162dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
