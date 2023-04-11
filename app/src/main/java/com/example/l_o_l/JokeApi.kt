@@ -7,7 +7,7 @@ import retrofit2.http.POST
 
 
 interface JokeApi {
-        @Headers("Content-Type: application/json", "Authorization: Bearer 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")
+        @Headers("Content-Type: application/json", "Authorization: Bearer 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")
         @POST("v1/engines/davinci-codex/completions")
         fun generateJoke(@Body request: JokeRequest): Call<JokeResponse>
     }

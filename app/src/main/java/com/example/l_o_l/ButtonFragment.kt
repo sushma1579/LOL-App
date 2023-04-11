@@ -22,17 +22,32 @@ class ButtonFragment : Fragment() {
         val button1 = view.findViewById<Button>(R.id.dogs_button)
         val button2 = view.findViewById<Button>(R.id.vegetable_button)
         val button3 = view.findViewById<Button>(R.id.school_button)
+        val button4 = view.findViewById<Button>(R.id.hippo_button)
+        val button5 = view.findViewById<Button>(R.id.dessert_button)
+        val button6 = view.findViewById<Button>(R.id.random_button)
 
         button1.setOnClickListener {
-            generateJoke("Why did the chicken cross the road?")
+            generateJoke("Tell me a joke about Dogs")
         }
 
         button2.setOnClickListener {
-            generateJoke("Why was six afraid of seven?")
+            generateJoke("Tell me a joke about vegetables")
         }
 
         button3.setOnClickListener {
-            generateJoke("What did one snowman say to the other snowman?")
+            generateJoke("Tell me a joke about schools")
+        }
+
+        button4.setOnClickListener {
+            generateJoke("Tell me a joke about hippos")
+        }
+
+        button5.setOnClickListener {
+            generateJoke("Tell me a joke about desserts")
+        }
+
+        button6.setOnClickListener {
+            generateJoke("Tell me a random joke")
         }
 
         return view

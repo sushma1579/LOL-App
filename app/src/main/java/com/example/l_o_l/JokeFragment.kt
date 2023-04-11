@@ -23,7 +23,7 @@ class JokeFragment : Fragment() {
         val moreButton = view.findViewById<Button>(R.id.more_button)
 
         moreButton.setOnClickListener {
-            Toast.makeText(requireContext(), "More button clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "More jokes!", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_jokeFragment2_to_buttonFragment)
         }
 
