@@ -1,58 +1,37 @@
-package com.example.l_o_l
-
-import android.content.Context
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
-import org.json.JSONObject
+import com.example.l_o_l.JokeApi
+import com.example.l_o_l.JokeRequest
+import com.example.l_o_l.JokeResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class JokeModel {
-    private val API_URL = "https://api.openai.com/v1/engines/davinci-codex/completions"
-    private val API_KEY = "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"
 
-    fun generateJoke(prompt: String, context: Context, callback: (String?) -> Unit) {
-        val queue = Volley.newRequestQueue(context)
-        val request = object : StringRequest(
-            Method.POST, API_URL,
+    private val retrofit = Retrofit.Builder()
+        .baseUrl("https://api.openai.com/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
+    private val api = retrofit.create(JokeApi::class.java)
 
-            Response.Listener { response ->
-                val joke = parseResponse(response)
-                callback(joke)
-            },
-            Response.ErrorListener {
-                callback(null)
-            }) {
-            override fun getHeaders(): MutableMap<String, String> {
-                val headers = HashMap<String, String>()
-                headers["Content-Type"] = "application/json"
-                headers["Authorization"] = "Bearer $API_KEY"
-                return headers
-            }
-
-            override fun getBody(): ByteArray {
-                return """
-                {
-                    "prompt": "$prompt",
-                    "temperature": 0.5,
-                    "max_tokens": 50,
-                    "stop": "\n"
+    fun generateJoke(prompt: String, callback: (String?) -> Unit) {
+        val request = JokeRequest(prompt)
+        val call = api.generateJoke(request)
+        call.enqueue(object : Callback<JokeResponse> {
+            override fun onResponse(call: Call<JokeResponse>, response: Response<JokeResponse>) {
+                if (response.isSuccessful) {
+                    val joke = response.body()?.choices?.get(0)?.text
+                    callback(joke)
+                } else {
+                    callback(null)
                 }
-            """.trimIndent().toByteArray()
             }
-        }
-        queue.add(request)
-    }
 
-
-    private fun parseResponse(response: String): String? {
-        // Parse the JSON response to extract the generated joke text
-        // Here's an example implementation that extracts the first generated text
-        val jsonArray = JSONObject(response).getJSONArray("choices")
-        if (jsonArray.length() > 0) {
-            val jsonObject = jsonArray.getJSONObject(0)
-            return jsonObject.getString("text")
-        }
-        return null
+            override fun onFailure(call: Call<JokeResponse>, t: Throwable) {
+                callback(null)
+            }
+        })
     }
 }
