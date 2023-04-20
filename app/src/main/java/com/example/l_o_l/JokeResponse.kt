@@ -1,16 +1,30 @@
 package com.example.l_o_l
 
+import com.google.gson.annotations.SerializedName
+
 data class JokeRequest(
-    val prompt: String,
-    val temperature: Double = 0.5,
-    val max_tokens: Int = 50,
-    val stop: String = "\n"
+    val model: String,
+    val messages: List<RequestMessage>,
+    val temperature: Double
+)
+
+data class RequestMessage(
+    val role: String,
+    @SerializedName("content")
+    val text: String
 )
 
 data class JokeResponse(
-    val choices: List<Choice>
+    val choices: List<ResponseChoice>
 )
 
-data class Choice(
+data class ResponseChoice(
+    val message: ResponseMessage
+)
+
+data class ResponseMessage(
+    val role: String,
+    @SerializedName("content")
     val text: String
 )
+

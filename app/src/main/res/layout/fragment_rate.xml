@@ -32,34 +32,8 @@
         android:textColor="@color/material_dynamic_neutral70"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,TextContrastCheck"
-        tools:layout_editor_absoluteY="75dp" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_textView"
+        tools:ignore="MissingConstraints,TextContrastCheck" />
 
-    <ImageView
-        android:id="@+id/rate_1"
-        android:layout_width="63dp"
-        android:layout_height="93dp"
-        app:srcCompat="@drawable/ic_rate_1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="162dp" />
-
-    <ImageView
-        android:id="@+id/rate_2"
-        android:layout_width="68dp"
-        android:layout_height="112dp"
-        app:srcCompat="@drawable/ic_rate_2"
-        tools:ignore="ImageContrastCheck,MissingConstraints"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="162dp" />
-
-    <ImageView
-        android:id="@+id/rate_3"
-        android:layout_width="77dp"
-        android:layout_height="107dp"
-        app:srcCompat="@drawable/ic_rate_3"
-        tools:ignore="ImageContrastCheck,MissingConstraints"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="162dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

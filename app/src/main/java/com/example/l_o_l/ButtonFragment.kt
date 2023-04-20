@@ -1,18 +1,17 @@
+package com.example.l_o_l
+
+import JokeFragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.example.l_o_l.R
 
 class ButtonFragment : Fragment() {
 
     private val jokeModel = JokeModel()
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -56,12 +55,14 @@ class ButtonFragment : Fragment() {
     private fun generateJoke(prompt: String) {
         jokeModel.generateJoke(prompt) { joke ->
             if (joke != null) {
-                val webView = WebView(requireContext())
-                webView.loadData(joke, "text/html", "UTF-8")
-                AlertDialog.Builder(requireContext())
-                    .setView(webView)
-                    .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
-                    .show()
+                val bundle = Bundle()
+                bundle.putString("joke", joke)
+                val jokeFragment = JokeFragment()
+                jokeFragment.arguments = bundle
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.myNavHostFragment, jokeFragment)
+                    .addToBackStack(null)
+                    .commit()
             } else {
                 Toast.makeText(
                     requireContext(),
@@ -73,3 +74,4 @@ class ButtonFragment : Fragment() {
     }
 
 }
+

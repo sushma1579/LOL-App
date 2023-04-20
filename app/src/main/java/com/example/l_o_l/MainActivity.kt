@@ -1,6 +1,5 @@
 package com.example.l_o_l
 
-import JokeModel
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
@@ -14,9 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         model = JokeModel()
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
-        val navController = navHostFragment.navController
+        supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
+
     }
 
 }
