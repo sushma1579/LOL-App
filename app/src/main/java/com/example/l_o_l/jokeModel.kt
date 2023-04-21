@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class JokeModel {
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://api.openai.com")
+        .baseUrl("https://api.openai.com/v1/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

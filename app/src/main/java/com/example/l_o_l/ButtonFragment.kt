@@ -2,6 +2,7 @@ package com.example.l_o_l
 
 import JokeFragment
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,6 +56,7 @@ class ButtonFragment : Fragment() {
     private fun generateJoke(prompt: String) {
         jokeModel.generateJoke(prompt) { joke ->
             if (joke != null) {
+                Log.e("isJokeAvailable",joke.toString())
                 val bundle = Bundle()
                 bundle.putString("joke", joke)
                 val jokeFragment = JokeFragment()

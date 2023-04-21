@@ -15,4 +15,12 @@
     <string name="rate_button">rate</string>
     <string name="how_was_the_joke">How was the joke ?</string>
     <string name="tap_to_rate">Tap To Rate</string>
+
+    <!-- contentDescription strings for quality icons -->
+    <string name="quality_0">joke Quality 0</string>
+    <string name="quality_1">joke Quality 1</string>
+    <string name="quality_2">joke Quality 2</string>
+    <string name="quality_3">joke Quality 3</string>
+    <string name="quality_4">joke Quality 4</string>
+    <string name="quality_5">joke Quality 5</string>
 </resources>
