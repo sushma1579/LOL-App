@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/joke_displayview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttons_layout"
+        android:padding="16dp"
+        android:text="@string/joke_textview"
+        android:textSize="30sp"/>
 
-        <TextView
-            android:id="@+id/scrollable_textview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/buttons_layout"
-            android:padding="16dp"
-            android:scrollbars="vertical"
-            android:text="@string/joke_textview"
-            android:textSize="25sp" />
-
-        <LinearLayout
+    <LinearLayout
             android:id="@+id/buttons_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

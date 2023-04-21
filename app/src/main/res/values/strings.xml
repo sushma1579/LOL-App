@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">LOL</string>
+    <string name="app_name">Laugh Out Loud</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dogs_button">DOG</string>
     <string name="dessert_button">DESSERT</string>
     <string name="vegetable_button">VEGETABLE</string>
@@ -23,4 +22,5 @@
     <string name="quality_3">joke Quality 3</string>
     <string name="quality_4">joke Quality 4</string>
     <string name="quality_5">joke Quality 5</string>
+
 </resources>

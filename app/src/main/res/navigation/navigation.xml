@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:tools="http://schemas.android.com/tools"
+<navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/buttonFragment">
+    app:startDestination="@id/buttonFragment3">
     <fragment
-        android:id="@+id/buttonFragment"
+        android:id="@+id/buttonFragment3"
         android:name="com.example.l_o_l.ButtonFragment"
         android:label="ButtonFragment" >
         <action
-            android:id="@+id/action_buttonFragment_to_jokeFragment2"
+            android:id="@+id/action_buttonFragment3_to_jokeFragment2"
             app:destination="@id/jokeFragment2" />
     </fragment>
     <fragment
         android:id="@+id/jokeFragment2"
-        android:name="JokeFragment"
+        android:name="com.example.l_o_l.JokeFragment"
         android:label="JokeFragment" >
         <action
             android:id="@+id/action_jokeFragment2_to_rateFragment2"
             app:destination="@id/rateFragment2" />
         <action
-            android:id="@+id/action_jokeFragment2_to_buttonFragment"
-            app:destination="@id/buttonFragment" />
+            android:id="@+id/action_jokeFragment2_to_buttonFragment3"
+            app:destination="@id/buttonFragment3" />
     </fragment>
     <fragment
         android:id="@+id/rateFragment2"
         android:name="com.example.l_o_l.RateFragment"
         android:label="RateFragment" >
         <action
-            android:id="@+id/action_rateFragment2_to_buttonFragment"
-            app:destination="@id/buttonFragment" />
+            android:id="@+id/action_rateFragment2_to_buttonFragment3"
+            app:destination="@id/buttonFragment3" />
     </fragment>
 </navigation>

@@ -1,6 +1,5 @@
 package com.example.l_o_l
 
-import JokeFragment
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -27,26 +26,32 @@ class ButtonFragment : Fragment() {
         val button6 = view.findViewById<Button>(R.id.random_button)
 
         button1.setOnClickListener {
+            Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
             generateJoke("Tell me a joke about Dogs")
         }
 
         button2.setOnClickListener {
+            Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
             generateJoke("Tell me a joke about vegetables")
         }
 
         button3.setOnClickListener {
+            Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
             generateJoke("Tell me a joke about schools")
         }
 
         button4.setOnClickListener {
+            Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
             generateJoke("Tell me a joke about hippos")
         }
 
         button5.setOnClickListener {
+            Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
             generateJoke("Tell me a joke about desserts")
         }
 
         button6.setOnClickListener {
+            Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
             generateJoke("Tell me a random joke")
         }
 
