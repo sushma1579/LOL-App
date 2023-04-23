@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class ButtonFragment : Fragment() {
 
@@ -64,12 +65,7 @@ class ButtonFragment : Fragment() {
                 Log.e("isJokeAvailable",joke.toString())
                 val bundle = Bundle()
                 bundle.putString("joke", joke)
-                val jokeFragment = JokeFragment()
-                jokeFragment.arguments = bundle
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.myNavHostFragment, jokeFragment)
-                    .addToBackStack(null)
-                    .commit()
+                findNavController().navigate(R.id.action_buttonFragment3_to_jokeFragment2, bundle)
             } else {
                 Toast.makeText(
                     requireContext(),

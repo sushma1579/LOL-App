@@ -2,6 +2,7 @@
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/joke_nav_graph"
     app:startDestination="@id/buttonFragment3">
     <fragment
         android:id="@+id/buttonFragment3"
@@ -21,6 +22,10 @@
         <action
             android:id="@+id/action_jokeFragment2_to_buttonFragment3"
             app:destination="@id/buttonFragment3" />
+        <argument
+            android:name="jokeData"
+            app:nullable="true"
+            app:argType="android.os.Bundle"/>
     </fragment>
     <fragment
         android:id="@+id/rateFragment2"
