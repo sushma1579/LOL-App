@@ -36,40 +36,19 @@ class JokeFragment : Fragment() {
         // Set click listener for "More" Button
         moreButton.setOnClickListener {
             Toast.makeText(requireContext(), "More jokes!", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_jokeFragment2_to_buttonFragment3)
+            // Navigate to ButtonFragment
+            findNavController().navigate(R.id.action_jokeFragment_to_buttonFragment)
         }
 
         // Set click listener for the "Rate" button
         rateButton.setOnClickListener {
             Toast.makeText(requireContext(), "Let's Rate the joke", Toast.LENGTH_SHORT).show()
             // Navigate to RateFragment
-            findNavController().navigate(R.id.action_jokeFragment2_to_rateFragment2)
+            findNavController().navigate(R.id.action_jokeFragment_to_rateFragment)
         }
         return view
     }
 }
-    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val joke = arguments?.getString("joke")
-        if (joke != null) {
-            jokeTextView.text = joke
-        }
-
-        // Set click listener for "More" Button
-        moreButton.setOnClickListener {
-            Toast.makeText(requireContext(), "More jokes!", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_jokeFragment2_to_buttonFragment)
-        }
-
-        // Set click listener for the "Rate" button
-        rateButton.setOnClickListener {
-            Toast.makeText(requireContext(), "Let's Rate the joke", Toast.LENGTH_SHORT).show()
-            // Navigate to RateFragment
-            findNavController().navigate(R.id.action_jokeFragment2_to_rateFragment2)
-        }
-    }*/
-
 
 
 

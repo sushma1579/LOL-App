@@ -28,48 +28,51 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/tap_to_rate"
-        android:textColor="@color/material_dynamic_neutral70"
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/rate_one_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rate_textView"
-        tools:ignore="MissingConstraints,TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_textView" />
 
     <ImageView
-        android:id="@+id/quality_zero_image"
+        android:id="@+id/rate_zero_image"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/quality_0"
-        app:layout_constraintEnd_toStartOf="@+id/quality_one_image"
+        app:layout_constraintEnd_toStartOf="@+id/rate_one_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tap_to_rate"
         app:srcCompat="@drawable/ic_rate_0" />
 
     <ImageView
-        android:id="@+id/quality_one_image"
+        android:id="@+id/rate_one_image"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:contentDescription="@string/quality_1"
-        app:layout_constraintBottom_toBottomOf="@+id/quality_zero_image"
-        app:layout_constraintEnd_toStartOf="@+id/quality_two_image"
-        app:layout_constraintStart_toEndOf="@+id/quality_zero_image"
-        app:srcCompat="@drawable/ic_rate_1" />
+        app:layout_constraintBottom_toBottomOf="@+id/rate_zero_image"
+        app:layout_constraintEnd_toStartOf="@+id/rate_two_image"
+        app:layout_constraintStart_toEndOf="@+id/rate_zero_image"
+        app:srcCompat="@drawable/ic_rate_1"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/quality_two_image"
+        android:id="@+id/rate_two_image"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:layout_marginEnd="@dimen/margin"
         android:contentDescription="@string/quality_2"
-        app:layout_constraintBottom_toBottomOf="@+id/quality_one_image"
+        app:layout_constraintBottom_toBottomOf="@+id/rate_one_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/quality_one_image"
-        app:srcCompat="@drawable/ic_rate_2" />
+        app:layout_constraintStart_toEndOf="@+id/rate_one_image"
+        app:srcCompat="@drawable/ic_rate_2"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/quality_three_image"
+        android:id="@+id/rate_three_image"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:layout_marginStart="@dimen/margin"
@@ -77,34 +80,37 @@
         android:layout_marginBottom="@dimen/margin"
         android:contentDescription="@string/quality_3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/quality_four_image"
+        app:layout_constraintEnd_toStartOf="@+id/rate_four_image"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quality_zero_image"
+        app:layout_constraintTop_toBottomOf="@+id/rate_zero_image"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_rate_3" />
+        app:srcCompat="@drawable/ic_rate_3"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/quality_four_image"
+        android:id="@+id/rate_four_image"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:contentDescription="@string/quality_4"
-        app:layout_constraintBottom_toBottomOf="@+id/quality_three_image"
-        app:layout_constraintEnd_toStartOf="@+id/quality_five_image"
-        app:layout_constraintStart_toEndOf="@+id/quality_three_image"
-        app:layout_constraintTop_toTopOf="@+id/quality_three_image"
-        app:srcCompat="@drawable/ic_rate_4" />
+        app:layout_constraintBottom_toBottomOf="@+id/rate_three_image"
+        app:layout_constraintEnd_toStartOf="@+id/rate_five_image"
+        app:layout_constraintStart_toEndOf="@+id/rate_three_image"
+        app:layout_constraintTop_toTopOf="@+id/rate_three_image"
+        app:srcCompat="@drawable/ic_rate_4"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/quality_five_image"
+        android:id="@+id/rate_five_image"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:layout_marginEnd="@dimen/margin"
         android:contentDescription="@string/quality_5"
-        app:layout_constraintBottom_toBottomOf="@+id/quality_four_image"
+        app:layout_constraintBottom_toBottomOf="@+id/rate_four_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/quality_four_image"
-        app:layout_constraintTop_toTopOf="@+id/quality_four_image"
-        app:srcCompat="@drawable/ic_rate_5" />
+        app:layout_constraintStart_toEndOf="@+id/rate_four_image"
+        app:layout_constraintTop_toTopOf="@+id/rate_four_image"
+        app:srcCompat="@drawable/ic_rate_5"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

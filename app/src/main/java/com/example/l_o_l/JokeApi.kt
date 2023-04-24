@@ -7,7 +7,9 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface JokeApi {
-    @Headers("Content-Type: application/json", "Authorization: Bearer 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")
+    // change the API Key if the app is failing to generate jokes ,API Key might be disabled
+    @Headers("Content-Type: application/json",
+             "Authorization: Bearer <API KEY>")
     @POST("chat/completions")
     fun generateJoke(@Body request: JokeRequest, @Query("prompt") prompt: String): Call<JokeResponse>
 }

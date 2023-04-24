@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/joke_nav_graph"
+    app:startDestination="@id/buttonFragment">
+    <fragment
+        android:id="@+id/buttonFragment"
+        android:name="com.example.l_o_l.ButtonFragment"
+        android:label="ButtonFragment" >
+        <action
+            android:id="@+id/action_buttonFragment_to_jokeFragment"
+            app:destination="@id/jokeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokeFragment"
+        android:name="com.example.l_o_l.JokeFragment"
+        android:label="JokeFragment" >
+        <action
+            android:id="@+id/action_jokeFragment_to_rateFragment"
+            app:destination="@id/rateFragment" />
+        <action
+            android:id="@+id/action_jokeFragment_to_buttonFragment"
+            app:destination="@id/buttonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="com.example.l_o_l.RateFragment"
+        android:label="RateFragment" >
+        <action
+            android:id="@+id/action_rateFragment_to_buttonFragment"
+            app:destination="@id/buttonFragment" />
+    </fragment>
+</navigation>
