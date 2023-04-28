@@ -34,6 +34,7 @@ That's it! With your API key added to the `local.properties` file, your Laugh Ou
 
 1. There will be at least 5 categories like book, nature, holiday, animals, food and also u can request a random joke.
    ![Screenshot 1](screenshots/Screenshot_buttonFrag.png)
+   <img src="screenshots/Screenshot_buttonFrag.png" alt="Alt Text" style="width:500px;height:300px;">
 
 2. User may request as many as jokes each day.
 3. The app uses OpenGPT API to generate jokes. 
