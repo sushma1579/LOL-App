@@ -39,9 +39,11 @@ That's it! With your API key added to the `local.properties` file, your Laugh Ou
 2. User may request as many as jokes each day.
 3. The app uses OpenGPT API to generate jokes. 
    ![Screenshot 2](screenshots/Screenshot_jokeFrag.png)
+   <img src="screenshots/Screenshot_jokeFrag.png" alt="Alt Text" style="width:250px;height:400px;"> 
 
 4. User can rate jokes from 0 to 5. 5 is a very good joke, 0 is not a good joke.
    ![Screenshot 3](screenshots/Screenshot_rateFrag.png)
+   <img src="screenshots/Screenshot_rateFrag.png" alt="Alt Text" style="width:250px;height:400px;">
 
 5. The app provides a clean and intuitive user interface for a seamless experience.
 6. More categories will be added in future updates.
