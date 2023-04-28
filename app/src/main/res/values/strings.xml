@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Laugh Out Loud</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="dogs_button">DOG</string>
-    <string name="dessert_button">DESSERT</string>
-    <string name="vegetable_button">VEGETABLE</string>
-    <string name="school_button">SCHOOL</string>
-    <string name="hippo_button">HIPPO</string>
+
+    //joke category buttons
+    <string name="book_button">BOOK</string>
+    <string name="food_button">FOOD</string>
+    <string name="animal_button">ANIMAL</string>
+    <string name="holiday_button">HOLIDAY</string>
+    <string name="nature_button">NATURE</string>
     <string name="random_button">RANDOM</string>
+
+    //textViews String values
     <string name="tap_textview">Find your new favorite joke today!</string>
     <string name="tap_textview2">Tap a button</string>
     <string name="joke_textview">Joke will be displayed here</string>
@@ -15,7 +18,7 @@
     <string name="how_was_the_joke">How was the joke ?</string>
     <string name="tap_to_rate">Tap To Rate</string>
 
-    <!-- contentDescription strings for quality icons -->
+    //joke quality
     <string name="quality_0">joke Quality 0</string>
     <string name="quality_1">joke Quality 1</string>
     <string name="quality_2">joke Quality 2</string>

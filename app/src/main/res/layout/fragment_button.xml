@@ -40,63 +40,63 @@
         app:layout_constraintTop_toBottomOf="@+id/tap_textview" />
 
     <Button
-        android:id="@+id/dogs_button"
+        android:id="@+id/food_button"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:text="@string/dogs_button"
-        app:layout_constraintBottom_toTopOf="@+id/hippo_button"
+        android:text="@string/food_button"
+        app:layout_constraintBottom_toTopOf="@+id/holiday_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/school_button"
+        app:layout_constraintStart_toEndOf="@+id/book_button"
         app:layout_constraintTop_toBottomOf="@+id/tap_textview2"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
-        android:id="@+id/dessert_button"
+        android:id="@+id/nature_button"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/dessert_button"
+        android:text="@string/nature_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/random_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vegetable_button" />
+        app:layout_constraintTop_toBottomOf="@+id/animal_button" />
 
     <Button
-        android:id="@+id/vegetable_button"
+        android:id="@+id/animal_button"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/vegetable_button"
-        app:layout_constraintBottom_toTopOf="@+id/dessert_button"
-        app:layout_constraintEnd_toStartOf="@+id/hippo_button"
+        android:text="@string/animal_button"
+        app:layout_constraintBottom_toTopOf="@+id/nature_button"
+        app:layout_constraintEnd_toStartOf="@+id/holiday_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/school_button" />
+        app:layout_constraintTop_toBottomOf="@+id/book_button" />
 
     <Button
-        android:id="@+id/hippo_button"
+        android:id="@+id/holiday_button"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:text="@string/hippo_button"
+        android:text="@string/holiday_button"
         app:layout_constraintBottom_toTopOf="@+id/random_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/vegetable_button"
-        app:layout_constraintTop_toBottomOf="@+id/dogs_button" />
+        app:layout_constraintStart_toEndOf="@+id/animal_button"
+        app:layout_constraintTop_toBottomOf="@+id/food_button" />
 
     <Button
-        android:id="@+id/school_button"
+        android:id="@+id/book_button"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/school_button"
-        app:layout_constraintBottom_toTopOf="@+id/vegetable_button"
-        app:layout_constraintEnd_toStartOf="@+id/dogs_button"
+        android:text="@string/book_button"
+        app:layout_constraintBottom_toTopOf="@+id/animal_button"
+        app:layout_constraintEnd_toStartOf="@+id/food_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tap_textview2"
@@ -112,8 +112,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/dessert_button"
-        app:layout_constraintTop_toBottomOf="@+id/hippo_button" />
+        app:layout_constraintStart_toEndOf="@+id/nature_button"
+        app:layout_constraintTop_toBottomOf="@+id/holiday_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

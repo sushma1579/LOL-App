@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <TextView
         android:id="@+id/joke_displayview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/buttons_layout"
-        android:padding="16dp"
+        android:fontFamily="@font/roboto"
+        android:padding="25dp"
         android:text="@string/joke_textview"
-        android:textSize="30sp"/>
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
 
     <LinearLayout
             android:id="@+id/buttons_layout"

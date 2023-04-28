@@ -1,5 +1,6 @@
 package com.example.l_o_l
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,47 +14,48 @@ import androidx.navigation.fragment.findNavController
 class ButtonFragment : Fragment() {
 
     private val jokeModel = JokeModel()
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_button, container, false)
-        val button1 = view.findViewById<Button>(R.id.dogs_button)
-        val button2 = view.findViewById<Button>(R.id.vegetable_button)
-        val button3 = view.findViewById<Button>(R.id.school_button)
-        val button4 = view.findViewById<Button>(R.id.hippo_button)
-        val button5 = view.findViewById<Button>(R.id.dessert_button)
+        val button1 = view.findViewById<Button>(R.id.food_button)
+        val button2 = view.findViewById<Button>(R.id.animal_button)
+        val button3 = view.findViewById<Button>(R.id.book_button)
+        val button4 = view.findViewById<Button>(R.id.holiday_button)
+        val button5 = view.findViewById<Button>(R.id.nature_button)
         val button6 = view.findViewById<Button>(R.id.random_button)
 
         button1.setOnClickListener {
             Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
-            generateJoke("Tell me a joke about Dogs")
+            generateJoke("Tell me a funny joke about food and cooking")
         }
 
         button2.setOnClickListener {
             Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
-            generateJoke("Tell me a joke about vegetables")
+            generateJoke("Tell me a funny joke about different animals")
         }
 
         button3.setOnClickListener {
             Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
-            generateJoke("Tell me a joke about schools")
+            generateJoke("Tell me a funny joke about books")
         }
 
         button4.setOnClickListener {
             Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
-            generateJoke("Tell me a joke about hippos")
+            generateJoke("Tell me a funny joke about holidays")
         }
 
         button5.setOnClickListener {
             Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
-            generateJoke("Tell me a joke about desserts")
+            generateJoke("Tell me a funny joke about nature")
         }
 
         button6.setOnClickListener {
             Toast.makeText(requireContext(), "Button clicked", Toast.LENGTH_SHORT).show()
-            generateJoke("Tell me a random joke")
+            generateJoke("Tell me a funny random joke")
         }
 
         return view
