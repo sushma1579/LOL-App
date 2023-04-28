@@ -32,18 +32,18 @@ That's it! With your API key added to the `local.properties` file, your Laugh Ou
 
 ## Features
 
-1. There will be at least 5 categories like book, nature, holiday, animals, food and also u can request a random joke.
-  <img src="screenshots/Screenshot_buttonFrag.png" alt="Alt Text" style="width:250px;height:450px;">
+1. There will be at least 5 categories like book, nature, holiday, animals, food and also u can request a random joke.(More categories will be added soon!)
 
-2. User may request as many as jokes each day.
-3. The app uses OpenGPT API to generate jokes. 
-   <img src="screenshots/Screenshot_jokeFrag.png" alt="Alt Text" style="width:250px;height:450px;"> 
+<img src="screenshots/Screenshot_buttonFrag.png" alt="Alt Text" style="width:250px;height:450px;">
 
-4. User can rate jokes from 0 to 5. 5 is a very good joke, 0 is not a good joke.
-   <img src="screenshots/Screenshot_rateFrag.png" alt="Alt Text" style="width:250px;height:450px;">
+2. User may request as many as jokes each day. The app uses OpenGPT API to generate jokes. 
 
-5. The app provides a clean and intuitive user interface for a seamless experience.
-6. More categories will be added in future updates.
+<img src="screenshots/Screenshot_jokeFrag.png" alt="Alt Text" style="width:250px;height:450px;"> 
+
+3. User can rate jokes from 0 to 5. 5 is a very good joke, 0 is not a good joke.
+   
+<img src="screenshots/Screenshot_rateFrag.png" alt="Alt Text" style="width:250px;height:450px;">
+
 
 ## Contributions
 
