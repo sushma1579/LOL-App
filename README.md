@@ -10,7 +10,7 @@ Download the app today and let the jokes begin!
 To run the application, follow these steps:
 
 1. Clone the repository - The user should start by cloning the repository on their local machine.
-2. Create a "local.properties" file in the root directory of the project and add your own API key as a property with the name API_KEY.(refer to "How to generate an API Key" section below)
+2. Create a `local.properties` file in the root directory of the project and add your own API key as a property with the name API_KEY.(refer to "How to generate an API Key" section below)
 3. Open the project in Android Studio - The user should open the project in Android Studio by selecting "Open an existing Android Studio project" and navigating to the root directory of the project.
 4. Build the project - The user should then build the project by selecting "Build > Make Project" or by pressing "Ctrl+F9" on Windows or "Cmd+F9" on Mac.
 5. Run the app - The user can run the app on an emulator or a connected device by selecting "Run > Run 'app'" or by pressing "Shift+F10" on Windows or "Cmd+R" on Mac.
