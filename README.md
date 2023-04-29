@@ -25,8 +25,8 @@ Here are the steps to generate an API key:
 1. Sign up for an OpenAI account: Go to the [OpenAI website](https://beta.openai.com/signup/) and sign up for an account. You will need to provide your name, email address, and credit card information.
 2. Create an API key: After signing up, navigate to the [API keys page](https://beta.openai.com/api-keys/) and click on the "Create new API key" button. Give your API key a name and select the appropriate permissions for your needs.
 3. Copy the API key: Once you've created an API key, you will see it listed on the API keys page. Click on the "Copy" button next to the API key to copy it to your clipboard.
-4. Add the API key to your project: Create a `local.properties` file in the root directory of your Laugh Out Loud project if it doesn't already exist. Then add the following line to the file, replacing `API_KEY` value with your actual API key
-`API_KEY=Your API Key`
+4. Add the API key to your project: Create a `local.properties` file in the root directory of your Laugh Out Loud project if it doesn't already exist. Then add the following line to the file `API_KEY=Your API Key`, and now replace `Your API Key` value with your actual API key
+
 
 That's it! With your API key added to the `local.properties` file, your Laugh Out Loud app can now use the OpenAI GPT API to generate jokes.
 
